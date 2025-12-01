@@ -1,1 +1,101 @@
-/* Start coding here */
+/* รีเซ็ตค่าเริ่มต้น */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #ffffff;
+    font-family: 'Sarabun', sans-serif; /* ฟอนต์สำหรับข้อความแชท */
+}
+
+/* ส่วนหัวด้านบน */
+header {
+    background-color: #757575; /* สีเทาเข้มตามภาพ */
+    color: white;
+    padding: 15px 20px;
+    font-family: 'Times New Roman', Times, serif; /* ฟอนต์แบบมีเชิงตามภาพ */
+    font-size: 28px;
+    width: 100%;
+}
+
+/* คอนเทนเนอร์ของแชท */
+.chat-container {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px; /* ระยะห่างระหว่างบรรทัด */
+}
+
+/* แถวของข้อความ */
+.message-row {
+    display: flex;
+    width: 100%;
+}
+
+.message-row.right {
+    justify-content: flex-end; /* ชิดขวา */
+}
+
+.message-row.left {
+    justify-content: flex-start; /* ชิดซ้าย */
+}
+
+/* รูปทรงกล่องข้อความ (Bubble) */
+.bubble {
+    padding: 10px 20px;
+    border-radius: 25px; /* ทำมุมโค้งมนแบบแคปซูล */
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 220px; /* กำหนดความกว้างให้เท่ากันทั้งหมด อิงจาก light-gray bubble ("Coding สนุกจังเลย" + padding + close icon) */
+    justify-content: flex-start; /* ชิดซ้าย */
+}
+
+/* สีเขียว (ฝั่งขวา) */
+.green {
+    background-color: #00d200; /* สีเขียวสด */
+    color: black;
+    font-weight: 500;
+}
+
+/* สีเทาอ่อน (ฝั่งขวา) */
+.light-gray {
+    background-color: #e6e6e6; /* สีเทาอ่อน */
+    color: black;
+    font-weight: 500;
+    padding-right: 35px; /* เผื่อที่ให้ไอคอนกากบาท */
+}
+
+/* สีเทาเข้ม (ฝั่งซ้าย) */
+.dark-gray {
+    background-color: #808080; /* สีเทากลาง */
+    color: white;
+}
+
+/* ไอคอนวงกลมเล็กๆ ในกล่องข้อความสีเทาอ่อน */
+.close-icon {
+    position: absolute;
+    top: 8px;
+    right: -4px;
+    transform: translateY(-50%);
+    width: 24px;
+    height: 24px;
+    background-color: #bdbdbd;
+    color: white;
+    border-radius: 50%;
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    line-height: 1;
+    z-index: 1;
+}
+
+/* ตัวเว้นระยะห่าง เพื่อดันข้อความฝั่งซ้ายลงไปข้างล่างเหมือนในรูป */
+.spacer {
+    height: 100px; 
+}
